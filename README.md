@@ -5,4 +5,4 @@ Web designing project aims to beautify UI/UX skills
 
 Currently I'm testing on github web hosting! &nbsp
 you can take a look on pages that I'm working on &nbsp
-: https://PrcTcal.github.io/beautify/index
+-> https://PrcTcal.github.io/beautify/index
