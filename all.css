@@ -9,6 +9,9 @@ body{
 a{
     text-decoration: none;
 }
+a:hover{
+    text-decoration:none;
+}
 
 .wrap {
     width:70%;
@@ -117,6 +120,7 @@ a{
     justify-content: center;
     font-size:18px;
     border-bottom:1px solid grey;
+    cursor:pointer;
     transition:all ease 0.2s;
 }
 .menu-bar ul li:hover{
@@ -133,7 +137,8 @@ a{
     width:100%;
     height:3500px;
     border:1px solid black;
-    background-color:rgb(99, 99, 98,0.5);
+    background-color:rgba(134, 134, 134, 0.3);
+    color:white;
 }
 
 
