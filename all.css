@@ -1,6 +1,6 @@
 body{
     width:100vw;
-    height:3500px;
+    height:1500px;
     margin:0;
     padding:0;
     display:block;
@@ -32,6 +32,7 @@ a:hover{
     flex-direction:row;
     justify-content:space-between;
     background-color:#FFDEE9;
+    z-index:100;
 }
 
 .logo{
@@ -130,7 +131,7 @@ a:hover{
 .container{
     display:block;
     width:100%;
-    height:3500px;
+    height:1500px;
     /* background-color:rgba(134, 134, 134, 0.3); */
     background-color:#f7fcff;
 }
