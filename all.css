@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 body{
     width:100vw;
     height:1500px;
@@ -240,10 +241,35 @@ a:hover{
 
 .card2 .clock div h1{
     font-size:6em;
-    color:cornflowerblue;
-    text-shadow: 0 0 50px rgb(0, 85, 255);
+    font-family: 'Noto Sans', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 20px rgb(0, 85, 255);
     transform:scale(0);
     transition:1s;
+}
+
+.card2 .clock div h1:after{
+    content:attr(data-text);
+    position:absolute;
+    top:0;
+    left:0;
+    font-family: 'Noto Sans', sans-serif;
+    color:rgb(0,85,255);
+    z-index:-1;
+    filter:blur(5px);
+}
+
+.card2 .clock div h1:before{
+    content:'';
+    top:0;
+    left:0;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgb(61, 126, 255);
+    z-index:-2;
+    opacity:.5;
+    filter:blur(40px);
 }
 
 .card2:hover .clock div h1{
