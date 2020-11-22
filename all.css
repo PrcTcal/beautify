@@ -139,20 +139,24 @@ a:hover{
 .style-content{
     width:95%;
     margin:20px auto;
+    display:flex;
+    flex-direction: row;
 }
 
 .style-card{
-    width:300px;
-    height:300px;
+    display:inline-block;
     margin:10px 10px;
     background-color:#fff;
-    box-shadow: 0px 30px 50px rgba(0,0,0,0.05);
+    box-shadow: 0px 30px 50px rgba(0,0,0,0.5);
     border-radius:10px;
     position:relative;
     overflow:hidden;
 }
 
-.style-card .imgBox{
+.card1{ width:300px; height:300px; }
+.card2{ width:500px; height:300px; display:flex; justify-content: center; align-items: center;}
+
+.card1 .imgBox{
     position: absolute;
     top:0;
     left:0;
@@ -164,11 +168,11 @@ a:hover{
     transition:0.5s;
 }
 
-.style-card:hover .imgBox{
+.card1:hover .imgBox{
     transform:scale(1) translateY(-100%);
 }
 
-.style-card .contentBox{
+.card1 .contentBox{
     position:relative;
     top:0;
     left:0;
@@ -184,16 +188,16 @@ a:hover{
     transform: scale(1) translateY(calc(100% - 5px));
 }
 
-.style-card:hover .contentBox{
+.card1:hover .contentBox{
     transform: scale(1);
 }
 
-.style-card .contentBox .icon img{
+.card1 .contentBox .icon img{
     max-width:80px;
     filter:invert(1);
 }
 
-.style-card .contentBox h3{
+.card1 .contentBox h3{
     color:#fff;
     text-transform: uppercase;
     font-size:16px;
@@ -201,11 +205,49 @@ a:hover{
     margin-top:20px;
 }
 
-.style-card .contentBox h4{
+.card1 .contentBox h4{
     color:#fff;
     font-size:12px;
     font-weight: 600;
     letter-spacing:2px;
+}
+
+.card2 .clock{
+    width:400px;
+    height:150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(37, 37, 37, 0.3);
+    border-radius:10px;
+    box-shadow:0 0 0 5px #353535, 0 0 0 10px #3e3e3e, inset 0 0 10px rgba(0,0,0,1), 0 5px 20px rgba(0,0,0,.5);
+}
+
+.card2 .clock div{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    background: #000;
+    align-items: center;
+    border-radius:10px;
+    transition:all ease 1s;
+}
+
+.card2:hover .clock div{
+    background:linear-gradient(0deg, #666, #000);
+}
+
+.card2 .clock div h1{
+    font-size:6em;
+    color:cornflowerblue;
+    text-shadow: 0 0 50px rgb(0, 85, 255);
+    transform:scale(0);
+    transition:1s;
+}
+
+.card2:hover .clock div h1{
+    transform:scale(1);
 }
 
 .footer{
