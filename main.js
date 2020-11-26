@@ -29,4 +29,19 @@ function menudrop(){
     }
 }
 
+function slide(obj){
+    var width = document.querySelector('.slide-content').offsetWidth;
+    var slide = document.querySelector('.slide');
+    var cur_offset = Number(slide.style.left.split('px')[0]);
+    if(obj.className == 'arrow-left'){
+        if(cur_offset < 0){
+            slide.style.left = cur_offset + width + 'px';
+        }
+    } else if(obj.className == 'arrow-right'){
+        if(cur_offset > width * -2){
+            slide.style.left = cur_offset - width + 'px';
+        }
+    }
+}
+
 

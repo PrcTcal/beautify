@@ -48,7 +48,7 @@ table {
 
 body{
     width:100vw;
-    height:1500px;
+    height:2500px;
     margin:0;
     padding:0;
     display:block;
@@ -62,7 +62,7 @@ a:hover{
 }
 
 .wrap {
-    width:70%;
+    width:100%;
     height:100%;
     margin:0 auto;
     display:flex;
@@ -138,6 +138,7 @@ a:hover{
     height:100%;
     font-size:30px;
     transition:0.2s;
+    color:cornflowerblue;
 }
 .menu button:hover{
     color:rgb(230, 46, 33);
@@ -180,9 +181,10 @@ a:hover{
 .container{
     display:block;
     width:100%;
-    height:1500px;
+    height:2500px;
     /* background-color:rgba(134, 134, 134, 0.3); */
     background-color:#f7fcff;
+    padding:0;
 }
 
 /*************************contents**************************/
@@ -353,7 +355,7 @@ a:hover{
     margin-bottom:20px;
 }
 
-.footer article p{ color:rgb(202, 202, 202); }
+.footer article p{ color:rgb(202, 202, 202); margin:5px 0;}
 
 .footer article p span, .footer article p i{
     font-size:24px;
@@ -376,23 +378,68 @@ a:hover{
     background-image:url(./images/images.jpeg);
     background-repeat:repeat-x;
     -webkit-background-clip: text;
-    animation: animate 6s linear infinite;
+    animation: animate 15s linear infinite;
 }
 
 @keyframes animate{
     0%{
-        background-position:left 0px top 80px;
+        background-position:left 0px top 120px;
     }
     25%{
-        background-position:left 238px top 40px;
+        background-position:left 212px top 50px;
     }
     50%{
-        background-position:left 476px top 5px;
+        background-position:left 424px top -30px;
     }
     75%{
-        background-position:left 714px top 40px;
+        background-position:left 636px top 50px;
     }
     100%{
-        background-position:left 870px top 80px;
+        background-position:left 848px top 120px;
     }
 }
+
+.style-content2{
+    width:100vw;
+    height:80vh;
+    border:1px solid black;
+    display:flex;
+    align-items: center;
+    overflow:hidden;
+}
+.slide{
+    width:300vw;
+    height:100%;
+    left:0px;
+    display:flex;
+    position:relative;
+    border:1px solid black;
+    transition:all ease 1s;
+}
+
+.slide-content{
+    width:100vw;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    z-index:1;
+}
+.slide-content:after{
+    width:100%;
+    height:100%;
+    content:'';
+    filter:opacity(.55);
+    background-image:url(./images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index:-1;
+    top:0;
+    left:0;
+    position:absolute;
+}
+.style-content2 .slide-content div{ width:100%; height:100%; }
+.style-content2 a span{ font-size:100px; z-index:10; position:absolute; color:#000; transition:0.1s; cursor:pointer;}
+.style-content2 a:hover span{ color:rgb(241, 48, 34); }
+.style-content2 a:nth-child(3) span{ right:0; }
