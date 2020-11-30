@@ -233,7 +233,7 @@ a:hover{
     left:0;
     width:100%;
     height:100%;
-    padding:20px;
+    /* padding:20px; */
     display:flex;
     justify-content: center;
     align-items: center;
@@ -439,7 +439,6 @@ a:hover{
     left:0;
     position:absolute;
 }
-.style-content2 .slide-content div{ width:100%; height:100%; }
 .style-content2 a span{ font-size:100px; z-index:10; position:absolute; color:#000; transition:0.1s; cursor:pointer;}
 .style-content2 a:hover span{ color:rgb(241, 48, 34); }
 .style-content2 a:nth-child(3) span{ right:0; }
