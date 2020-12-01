@@ -1,5 +1,5 @@
 window.onload = function(){
-    document.querySelector('.menu-bar').style.height='0px';
+    document.querySelector('.menu-bar').style.width='0px';
     var clock = document.querySelector('.card2');
     var interval;
     clock.addEventListener('mouseover', function(){
@@ -21,24 +21,25 @@ window.onload = function(){
 }
 
 function menudrop(){
-    var bar = document.querySelector('.menu-bar');
-    if(bar.style.height == '0px'){
-        bar.style.height = '140px';
+   var tmp = document.querySelector('.menu-bar');
+   if(tmp.style.width == '0px'){
+        tmp.style.width = '200px';
     } else {
-        bar.style.height = '0px';
+        tmp.style.width = '0px';
     }
 }
 
 function slide(obj){
     var width = document.querySelector('.slide-content').offsetWidth;
     var slide = document.querySelector('.slide');
+    var length = document.querySelectorAll('.slide-content').length - 1;
     var cur_offset = Number(slide.style.left.split('px')[0]);
     if(obj.className == 'arrow-left'){
         if(cur_offset < 0){
             slide.style.left = cur_offset + width + 'px';
         }
     } else if(obj.className == 'arrow-right'){
-        if(cur_offset > width * -2){
+        if(cur_offset > width * (length * -1)){
             slide.style.left = cur_offset - width + 'px';
         }
     }

@@ -48,7 +48,7 @@ table {
 
 body{
     width:100vw;
-    height:2500px;
+
     margin:0;
     padding:0;
     display:block;
@@ -127,7 +127,6 @@ a:hover{
 
 .menu {
     width:50px;
-    
     padding-right:10px;
 }
 
@@ -139,16 +138,21 @@ a:hover{
     font-size:30px;
     transition:0.2s;
     color:cornflowerblue;
+    outline:none;
 }
 .menu button:hover{
     color:rgb(230, 46, 33);
 }
 
 .menu-bar{
-    position:absolute;
-    transform:translate(-30%);
     overflow:hidden;
-    background:#fff;
+    position:absolute;
+    width:0px;
+    height:100%;
+    z-index:10;
+    top:45px;
+    right:0;
+    background-color:rgba(20, 20, 20, .8);
     transition:all ease 0.5s;
 }
 
@@ -158,11 +162,10 @@ a:hover{
     align-items: center;
     padding:0px;
     margin:0;
-    width:70px;
 }
 
 .menu-bar ul li{
-    padding:10px 0;
+    padding:20px 0;
     width:100%;
     display:flex;
     justify-content: center;
@@ -174,17 +177,27 @@ a:hover{
 .menu-bar ul li:hover{
     background-color:rgba(78, 78, 189, 0.5);
 }
-.menu-bar ul li:nth-child(3){
-    border:none;
-}
+
 
 .container{
     display:block;
     width:100%;
-    height:2500px;
+
     /* background-color:rgba(134, 134, 134, 0.3); */
     background-color:#f7fcff;
     padding:0;
+}
+
+.temp{
+    display:flex;
+    position:absolute;
+    width:0px;
+    height:100%;
+    z-index:10;
+    top:45px;
+    right:0;
+    background-color:rgba(20, 20, 20, .8);
+    transition:all ease 0.5s;
 }
 
 /*************************contents**************************/
@@ -401,7 +414,7 @@ a:hover{
 
 .style-content2{
     width:100vw;
-    height:80vh;
+    height:100vh;
     border:1px solid black;
     display:flex;
     align-items: center;
