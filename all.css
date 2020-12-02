@@ -455,3 +455,35 @@ a:hover{
 .style-content2 a span{ font-size:100px; z-index:10; position:absolute; color:#000; transition:0.1s; cursor:pointer;}
 .style-content2 a:hover span{ color:rgb(241, 48, 34); }
 .style-content2 a:nth-child(3) span{ right:0; }
+
+.flip-content{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:250px;
+    border:1px solid black;
+    perspective:1000px;
+    transform-style:preserve-3d;
+}
+
+.left{
+    width:250px;
+    height:100%;
+    border:1px solid blue;
+    display:inline-block;
+}
+
+.right{
+    width:250px;
+    height:100%;
+    border:1px solid red;
+    display:inline-block;
+    transition:all ease 2s;
+    transform-origin:left;
+    transform: rotateY(0deg);
+}
+
+.flip-content:hover .right{
+    transform: rotateY(-180deg);
+}
