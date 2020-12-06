@@ -18,6 +18,12 @@ window.onload = function(){
     clock.addEventListener('mouseout', function(){
         clearInterval(interval);
     })
+
+    setSlidePage();
+}
+
+function setSlidePage(){
+    document.querySelector('.slide').style.width = document.querySelectorAll('.slide-content').length * 100 + 'vw';
 }
 
 function menudrop(){
